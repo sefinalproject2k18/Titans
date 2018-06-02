@@ -1,0 +1,195 @@
+﻿@{
+    ViewBag.Title = "GameBoard";
+}
+<style>
+   #chartdiv {
+	width	: 100%;
+	height	: 500px;
+}													
+</style>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-sm-9"></div>
+        <div class="col-sm-3">
+            <span style="float: right; background-color: #428bca;" class="badge badge-pill badge-success"><span class="glyphicon glyphicon-user"></span>@ViewBag.Usrname</span>
+            <br />
+        </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item active"><a data-toggle="tab" href="#tab1"><small>ICT sector</small> </a></li>
+        <li class="nav-item"><a data-toggle="tab" href="#tab2"><small>Food & breverages sector</small></a></li>
+        <li class="nav-item"><a data-toggle="tab" href="#tab3"><small>Advertising Sector</small></a></li>
+        <li class="nav-item"><a data-toggle="tab" href="#tab4"><small>Sector 4</small> </a></li>
+        <li class="nav-item"><a data-toggle="tab" href="#tab5"><small>Sector 5</small></a></li>
+        <li class="nav-item"><a data-toggle="tab" href="#tab6"><small>Sector 6</small></a></li>
+
+    </ul>
+
+    <div class="tab-content" style="background-color: #ffffff; border: 1px solid #ffffff;">
+        <div id="tab1" class="tab-pane fade in active">
+            <div id="chartdiv"></div>		
+
+        </div>
+        <div id="tab2" class="tab-pane fade" style="background-color: #ffffff; border: 1px solid #ffffff;">
+            <div class="container">
+            </div>
+        </div>
+        <div id="tab3" class="tab-pane fade" style="background-color: #ffffff; border: 1px solid #ffffff;">
+            <div class="container">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-dark  table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Player</th>
+                            <th scope="col">Turn 1</th>
+                            <th scope="col">Turn 2</th>
+                            <th scope="col">Turn 3</th>
+                            <th scope="col">Turn 4</th>
+                            <th scope="col">Turn 5</th>
+                            <th scope="col">Turn 6</th>
+                            <th scope="col">Turn 7</th>
+                            <th scope="col">Turn 8</th>
+                            <th scope="col">Turn 9</th>
+                            <th scope="col">Turn 10</th>
+                            <th scope="col">Overall</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">@ViewBag.Usrname</th>
+                            <td><span class="text-success">100.00 </span></td>
+                            <td><span class="text-success">500.00 </span></td>
+                            <td><span class="text-danger">-100.00 </span></td>
+                            <td><span class="text-success">800.00 </span></td>
+                            <td><span class="text-danger">-200.00 </span></td>
+                            <td><span class="text-success">5000.00 </span></td>
+                            <td><span class="text-success">700.00 </span></td>
+                            <td><span class="text-success">700.00 </span></td>
+                            <td><span class="text-danger">-4000.00 </span></td>
+                            <td><span class="text-success">1000.00 </span></td>
+                            <td><span class="text-success">7200.00</span></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<script type="text/javascript">
+    var chartData = generateChartData();
+
+        var chart = AmCharts.makeChart("chartdiv", {
+            "type": "serial",
+            "theme": "none",
+            "legend": {
+                "useGraphSettings": true
+            },
+            "dataProvider": chartData,
+            "synchronizeGrid": true,
+            "valueAxes": [{
+                "id": "v3",
+                "axisColor": "#B0DE09",
+                "axisThickness": 2,
+                "gridAlpha": 0,
+                "offset": 50,
+                "axisAlpha": 1,
+                "position": "left"
+            }],
+            "graphs": [{
+                "valueAxis": "v3",
+                "lineColor": "#FF6600",
+                "bullet": "round",
+                "bulletBorderThickness": 1,
+                "hideBulletsCount": 30,
+                "title": "red line",
+                "valueField": "visits",
+                "fillAlphas": 0
+            }, {
+                "valueAxis": "v3",
+                "lineColor": "#FCD202",
+                "bullet": "square",
+                "bulletBorderThickness": 1,
+                "hideBulletsCount": 30,
+                "title": "yellow line",
+                "valueField": "hits",
+                "fillAlphas": 0
+            }, {
+                "valueAxis": "v3",
+                "lineColor": "#B0DE09",
+                "bullet": "triangleUp",
+                "bulletBorderThickness": 1,
+                "hideBulletsCount": 30,
+                "title": "green line",
+                "valueField": "views",
+                "fillAlphas": 0
+            }],
+            "chartScrollbar": {},
+            "chartCursor": {
+                "cursorPosition": "mouse"
+            },
+            "categoryField": "turn",
+            "categoryAxis": {
+                "parseDates": true,
+                "axisColor": "#DADADA",
+                "minorGridEnabled": true
+            },
+            "export": {
+                "enabled": true,
+                "position": "bottom-right"
+            }
+        });
+
+        chart.addListener("dataUpdated", zoomChart);
+        zoomChart();
+
+    // generate some random data, quite different range
+    function generateChartData() {
+        var chartData = [];
+        var firstDate = new Date();
+        firstDate.setDate(firstDate.getDate() - 100);
+
+        var visits = 1600;
+        var hits = 2900;
+        var views = 8700;
+
+
+        for (var i = 0; i < 100; i++) {
+            // we create date objects here. In your data, you can have date strings
+            // and then set format of your dates using chart.dataDateFormat property,
+            // however when possible, use date objects, as this will speed up chart rendering.
+            var newDate = new Date(firstDate);
+            newDate.setDate(newDate.getDate() + i);
+
+            visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+            hits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+            views += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+
+            chartData.push({
+                date: newDate,
+                visits: visits,
+                hits: hits,
+                views: views
+            });
+        }
+        return chartData;
+    }
+
+    function zoomChart() {
+        chart.zoomToIndexes(chart.dataProvider.length - 20, chart.dataProvider.length - 1);
+    }
+</script>

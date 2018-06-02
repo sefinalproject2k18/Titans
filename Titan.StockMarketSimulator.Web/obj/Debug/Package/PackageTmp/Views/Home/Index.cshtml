@@ -1,0 +1,128 @@
+﻿<div class="jumbotron">
+    <div class="imgContainner">
+        <div class="row">
+            <div class="col-sm-8">
+                <h3><strong>V I R T U A L T R A D E R</strong> <small>stock market simulator game</small></h3>
+                <p class="lead"><small><strong>BUY SELL EARN </strong>market shares with <strong>VIRTUAL MONEY </strong>and have a <strong>FUN</strong>.</small><a class="btn-primary btn-sm" data-toggle="modal" data-target="#modelUsrname" style="float: right;"> Lest Play <span class="glyphicon glyphicon-triangle-right "></span></a></p>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="img-responsive" style="height: 340px;" width="500px;" src="~/Src/Images/511198842.jpg" />
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <div class="alert alert-success">
+                            <h4><span class="glyphicon glyphicon-usd"></span><strong style="font-size: 90%">Trade without any risk</strong> </h4>
+                            <p style="font-size: 15px;">
+
+                                <small>Start with $1000 LKR in virtual cash and put your trading skills to  earn maximum virtual creadits
+                                    <br />
+                                    <br />
+                                </small>
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+                            <div class="alert alert-success">
+                                <h4><span class="glyphicon glyphicon-stats"></span><strong>Improve your skills</strong> </h4>
+                                <p style="font-size: 15px;">
+
+                                    <small>This is a good choice to get a stock trading experience before you are going to deal with a real stock market
+
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="alert alert-success">
+                            <h4><span class="glyphicon glyphicon-user"></span><strong style="font-size: 90%">Multiplayer experience</strong> </h4>
+                            <p style="font-size: 15px;">
+
+                                <small>You can challenge your friends to play virtual trader and compair your skills.<br />
+                                    Don't worry if you are alone, there are computer players
+
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div>
+
+                            <div class="alert alert-success">
+                                <h4><span class="glyphicon glyphicon-usd"></span><strong>Trade without a risk</strong> </h4>
+                                <p style="font-size: 15px;">
+
+                                    <small>Start with $1000 LKR in virtual cash and put your trading skills to  earn maximum virtual creadits
+                                        <br />
+                                        <br />
+                                        <br />
+                                    </small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+        </div>
+        @*<div class="row">
+                <div class="col-md-4">
+                    <h2>Getting started</h2>
+                    <p>
+                        ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
+                        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
+                        is an ideal platform for building RESTful applications on the .NET Framework.
+                    </p>
+                    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Get more libraries</h2>
+                    <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+                    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h2>Web Hosting</h2>
+                    <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+                    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+                </div>
+            </div>*@
+    </div>
+</div>
+<div class="modal fade" id="modelUsrname" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="@Url.Action("GameBoard", "Game")">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Please enter a username    </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Username</label>
+                        <input type="text" class="form-control"name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp" placeholder="Type a username">
+                        @* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    @* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>*@
+                    <button type="submit" class="btn btn-primary">OK</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
