@@ -43,10 +43,9 @@
     <Compile Include="Entities\Game.cs" />
     <Compile Include="Entities\GameContainer.cs" />
     <Compile Include="Entities\Player.cs" />
+    <Compile Include="GameLogic\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GameLogic\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

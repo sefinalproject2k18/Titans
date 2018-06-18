@@ -7,10 +7,11 @@ namespace Titan.StockMarketSimulator.GameLogic.Entities
 {
     public class Player
     {
-        public int PlayerID { get; set; }
+        public string PlayerID { get; set; }
+        public string IPAddress { get;set; }
         public string Username { get; set; }
         public double Score { get;set; }
-        public BankAccount BankAccount { get; set; }
+        public static BankAccount BankAccount { get; set; }
 
         public Player()
         {

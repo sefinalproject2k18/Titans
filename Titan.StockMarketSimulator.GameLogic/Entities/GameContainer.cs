@@ -5,10 +5,13 @@ using System.Text;
 
 namespace Titan.StockMarketSimulator.GameLogic.Entities
 {
+    
     public static class GameContainer
     {
-        private static List<Player> players = new List<Player>();
+        private static List<Game> games = new List<Game>();
 
-        public static List<Player> Players { get => players; set => players = value; }
+        public static List<Game> Games { get => Games; set => Games = value; }
+
+        //ToDo.. add portfolio
     }
 }
