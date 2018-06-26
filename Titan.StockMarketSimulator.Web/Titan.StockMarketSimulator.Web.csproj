@@ -216,7 +216,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="GameEngine\BankAccount.js" />
     <Content Include="GameEngine\GameEngine.js" />
+    <Content Include="GameEngine\JSON\BankAcount.json" />
+    <Content Include="GameEngine\JSON\Games.json" />
+    <Content Include="GameEngine\JSON\StockMarket.json" />
     <Content Include="GameEngine\node_modules\.bin\mime" />
     <Content Include="GameEngine\node_modules\.bin\mime.cmd" />
     <Content Include="GameEngine\node_modules\accepts\HISTORY.md" />

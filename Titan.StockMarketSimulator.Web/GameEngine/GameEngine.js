@@ -131,10 +131,6 @@ function getRandomStockValues() {
     var Aviation = { Emirates: 1, Quantas: 2, Ethihad: 3 };
 
 
-
-
-
-
     return marketData;
 }
 
