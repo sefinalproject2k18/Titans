@@ -5,11 +5,14 @@ using System.Text;
 
 namespace Titan.StockMarketSimulator.GameLogic.Entities
 {
-    public struct Game
+    public class Game
     {
-        public long GameID { get; set; }
-        public static List<Player> Players { get; set; }
+        public int GameID { get; set; }
+        public List<Player> Players { get; set; }
 
-       
+        public Game()
+        {
+            Players = new List<Player>();
+        }
     }
 }

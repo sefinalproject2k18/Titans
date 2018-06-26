@@ -7,7 +7,7 @@
     @Styles.Render("~/Content/css")
     <style type="text/css">
     .watermark {
-        background-image: url(/Titan.StockMarketSimulator.Web/Src/Images/watermark.jpg);
+        background-image: url(@Url.Content("~/Src/Images/watermark.jpg"));
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -16,7 +16,15 @@
     @Scripts.Render("~/bundles/modernizr") 
          
 </head>
+
 <body class="watermark">
+  
+    <div hidden="hidden" id="hiddenFields">
+        <input type="hidden" id="PlayerID" />
+        <input type="hidden" id="GameID" />
+        <input type="hidden" id="PlayerIP" />
+        <input type="hidden" id="Username" />
+    </div>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -30,7 +38,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>*@
+                        <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>*@
                 </ul>
             </div>
         </div>

@@ -30,7 +30,20 @@
     <div class="tab-content" style="background-color: #ffffff; border: 1px solid #ffffff;">
         <div id="tab1" class="tab-pane fade in active">
             <div id="chartdiv"></div>		
+            <div class="row">
+                <div class="col-sm-8"></div>
+                 <div class="col-sm-2">
+                     <a href="#" class="btn btn-sm btn-primary">
+                         Buy
+                     </a>
+                     <a href="#" class="btn btn-sm btn-primary">
+                         Sell
+                     </a>
+                 </div>
+                 <div class="col-sm-2">
 
+                 </div>
+            </div>
         </div>
         <div id="tab2" class="tab-pane fade" style="background-color: #ffffff; border: 1px solid #ffffff;">
             <div class="container">
@@ -86,10 +99,97 @@
     </div>
 
 </div>
+<div class="modal fade" id="modalBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form @*action="@Url.Action("GameBoard", "Game")"*@>
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Please enter a username    </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+                 <div class="modal-body">
+                    <div class="form-group">
+                        <label>Company</label>
+                        <select class="form-control">
+                            <option value="0">
+                               Please Select
+                           </option>
+                            <option value="1">
+                               WSO2
+
+                           </option>
+                            <option value="2">
+                               Pearson
+                           </option>
+                            <option value="3">
+                               Vertusa
+                           </option>
+                        </select>
+                        <label>Share Price</label>
+                        <input type="text" value="200" class="form-control"name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp" disabled="disabled">
+                         <label>Units</label>
+                        <input type="number" value="0" placeholder="500 MAX" class="form-control"name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp">
+                        @* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    @* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>*@
+                    <button type="button" class="btn btn-primary">OK</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalSell" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <form action="@Url.Action("GameBoard", "Game")">
+            <div class="modal-header">
+                <h5 class="modal-title">Sell Shares</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Company</label>
+                        <select class="form-control">
+                            <option value="0">
+                               Please Select
+                           </option>
+                            <option value="1">
+                               WSO2
+                           </option>
+                            <option value="2">
+                               Pearson
+                           </option>
+                            <option value="3">
+                               Vertusa
+                           </option>
+                        </select>
+                        <label>Share Price</label>
+                        <input type="text" value="200" class="form-control"name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp" disabled="disabled">
+                         <label>Units</label>
+                        <input type="number" value="0" placeholder="500 MAX" class="form-control"name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp">
+                        @* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    @* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>*@
+                    <button type="button" class="btn btn-primary">Sell</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
 <script src="https://www.amcharts.com/lib/3/serial.js"></script>
 <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
 <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+<script src="~/Scripts/socket.io.js"></script>
 <script type="text/javascript">
     var chartData = generateChartData();
 
@@ -116,8 +216,8 @@
                 "bullet": "round",
                 "bulletBorderThickness": 1,
                 "hideBulletsCount": 30,
-                "title": "red line",
-                "valueField": "visits",
+                "title": "Virtusa",
+                "valueField": "Virtusa",
                 "fillAlphas": 0
             }, {
                 "valueAxis": "v3",
@@ -125,8 +225,8 @@
                 "bullet": "square",
                 "bulletBorderThickness": 1,
                 "hideBulletsCount": 30,
-                "title": "yellow line",
-                "valueField": "hits",
+                "title": "Pearson",
+                "valueField": "Pearson",
                 "fillAlphas": 0
             }, {
                 "valueAxis": "v3",
@@ -134,8 +234,8 @@
                 "bullet": "triangleUp",
                 "bulletBorderThickness": 1,
                 "hideBulletsCount": 30,
-                "title": "green line",
-                "valueField": "views",
+                "title": "WSO2",
+                "valueField": "WSO2",
                 "fillAlphas": 0
             }],
             "chartScrollbar": {},
@@ -144,12 +244,12 @@
             },
             "categoryField": "turn",
             "categoryAxis": {
-                "parseDates": true,
+                "parseDates": false,
                 "axisColor": "#DADADA",
                 "minorGridEnabled": true
             },
             "export": {
-                "enabled": true,
+                "enabled": false,
                 "position": "bottom-right"
             }
         });
@@ -159,33 +259,65 @@
 
     // generate some random data, quite different range
     function generateChartData() {
-        var chartData = [];
-        var firstDate = new Date();
-        firstDate.setDate(firstDate.getDate() - 100);
-
-        var visits = 1600;
-        var hits = 2900;
-        var views = 8700;
-
-
-        for (var i = 0; i < 100; i++) {
-            // we create date objects here. In your data, you can have date strings
-            // and then set format of your dates using chart.dataDateFormat property,
-            // however when possible, use date objects, as this will speed up chart rendering.
-            var newDate = new Date(firstDate);
-            newDate.setDate(newDate.getDate() + i);
-
-            visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
-            hits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
-            views += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
-
-            chartData.push({
-                date: newDate,
-                visits: visits,
-                hits: hits,
-                views: views
-            });
+        var chartData = [{
+            "turn": 0,
+            "Pearson":120,
+            "WSO2": 150,
+            "Virtusa":110
+        }, {
+            "turn": 1,
+            "Pearson": 100,
+            "WSO2": 200,
+            "Virtusa": 150
+        }, {
+            "turn": 2,
+            "Pearson": 150,
+            "WSO2": 250,
+            "Virtusa": 150
+        }, {
+            "turn": 3,
+            "Pearson": 400,
+            "WSO2": 500,
+            "Virtusa": 200
+        }, {
+            "turn": 4,
+            "Pearson": 400,
+            "WSO2": 600,
+            "Virtusa": 550
+        }, {
+            "turn": 5,
+            "Pearson": null,
+            "WSO2": null,
+            "Virtusa": null
+        }, {
+            "turn": 6,
+            "Pearson": null,
+            "WSO2": null,
+            "Virtusa": null
+        }, {
+            "turn": 7,
+            "Pearson": null,
+            "WSO2": null,
+            "Virtusa": null
+        }, {
+            "turn": 8,
+            "Pearson": null,
+            "WSO2": null,
+            "Virtusa": null
+        }, {
+            "turn": 9,
+            "Pearson": null,
+            "WSO2": null,
+            "Virtusa": null
+        },
+        {
+            "turn": 10,
+            "Pearson": null,
+            "WSO2": null,
+            "Virtusa": null
         }
+        ];
+
         return chartData;
     }
 
