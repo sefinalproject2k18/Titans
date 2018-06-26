@@ -1,0 +1,49 @@
+[{
+	"sectorName": "ICT",
+	"companies": [{
+		"companyName": "Virtusa",
+		"prices": []
+	}, {
+		"companyName": "WSO2",
+		"prices": []
+	}, {
+		"companyName": "Codegen",
+		"prices": []
+	}]
+}, {
+	"sectorName": "FoodBeverages",
+	"companies": [{
+		"companyName": "Nestle",
+		"prices": []
+	}, {
+		"companyName": "Pepsi",
+		"prices": []
+	}, {
+		"companyName": "Heinz",
+		"prices": []
+	}]
+}, {
+	"sectorName": "Shipping",
+	"companies": [{
+		"companyName": "Marsk",
+		"prices": []
+	}, {
+		"companyName": "OOCL",
+		"prices": []
+	}, {
+		"companyName": "EverGreen",
+		"prices": []
+	}]
+}, {
+	"sectorName": "Aviation",
+	"companies": [{
+		"companyName": "Emirates",
+		"prices": []
+	}, {
+		"companyName": "Quantas",
+		"prices": []
+	}, {
+		"companyName": "Ethihad",
+		"prices": []
+	}]
+}]
