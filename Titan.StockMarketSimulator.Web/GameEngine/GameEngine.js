@@ -100,6 +100,47 @@ io.on('connection', function (socket) {
 });
 
 
+function getRandomStockValues() {
+
+    var marketData = jsonfile.readFileSync("./JSON/StockMarket.json");
+    var Events = 5;
+    var SectorTrend = [-3, -2, -1, 0, 1, 2, 3];
+    var MarketTrend = [-3, -2, -1, 0, 1, 2, 3];
+    var RandomTrend = [-2, -1, 0, 1, 2];
+
+    for (var i = 0; i < marketData.length; i++) {
+        for (var j = 0; j < marketData[i].companies.length; j++) {
+            var randomCompanyValue = Math.floor(Math.random() * 51) + 50; //get a random value between 50 & 100
+            for (var x = 0; x < 10; x++) {
+                var randomSectorTrend = random_item(SectorTrend);
+                var randomMarketTrend = random_item(MarketTrend);
+                var randomRandomTrend = random_item(RandomTrend);
+
+                var RandomValue = Events + randomSectorTrend + randomMarketTrend + randomRandomTrend;
+                var IncreasedValue = randomCompanyValue * (RandomValue / 100);
+                randomCompanyValue = randomCompanyValue + IncreasedValue;
+                marketData[i].companies[j].prices.push(randomCompanyValue.toFixed(2));
+            }
+        }     
+    }
+
+    var Sectors = { ICT: 1, FoodBeverages: 2, Shipping: 3, Aviation: 4 }
+    var ICT = { Virtusa: 1, WSO2: 2, Codegen: 3 }
+    var FoodBeverages = { Nestle: 1, Pepsi: 2, Heinz: 3 };
+    var Shipping = { Marsk: 1, OOCL: 2, EverGreen: 3 };
+    var Aviation = { Emirates: 1, Quantas: 2, Ethihad: 3 };
+
+
+
+
+
+
+    return marketData;
+}
+
+function random_item(items) {
+    return items[Math.floor(Math.random() * items.length)];
+}
 
 
 
