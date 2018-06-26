@@ -4,118 +4,227 @@
     @Html.Hidden("GameID")
     @Html.Hidden("username")
 </form>
-
-<div class="jumbotron">
-    <div class="imgContainner">
-        <div class="row">
-            <div class="col-sm-8">
-                <h3><strong>V I R T U A L T R A D E R</strong> <small>stock market simulator game</small></h3>
-                <p class="lead"><small><strong>BUY SELL EARN </strong>market shares with <strong>VIRTUAL MONEY </strong>and have a <strong>FUN</strong>.</small><a class="btn-primary btn-sm" data-toggle="modal" data-target="#modelUsrname" style="float: right;"> Lest Play <span class="glyphicon glyphicon-triangle-right "></span></a></p>
-            </div>
-            <div class="col-sm-4">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <img class="img-responsive" style="height: 340px;" width="500px;" src="~/Src/Images/511198842.jpg" />
-            </div>
-            <div class="col-sm-6">
-                <div class="row">
-                    <div class="col-sm-6">
-
-                        <div class="alert alert-success">
-                            <h4><span class="glyphicon glyphicon-usd"></span><strong style="font-size: 90%">Trade without any risk</strong> </h4>
-                            <p style="font-size: 15px;">
-
-                                <small>
-                                    Start with $1000 LKR in virtual cash and put your trading skills to  earn maximum virtual creadits
-                                    <br />
-                                    <br />
-                                </small>
-                            </p>
-                        </div>
-
-
-                    </div>
-                    <div class="col-sm-6">
-                        <div>
-                            <div class="alert alert-success">
-                                <h4><span class="glyphicon glyphicon-stats"></span><strong>Improve your skills</strong> </h4>
-                                <p style="font-size: 15px;">
-
-                                    <small>
-                                        This is a good choice to get a stock trading experience before you are going to deal with a real stock market
-
-                                    </small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+<style>
+    .chart {
+        width: 100%;
+        height: 500px;
+    }
+</style>
+<div id="homeContent">
+    <div class="jumbotron">
+        <div class="imgContainner">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h3><strong>V I R T U A L T R A D E R</strong> <small>stock market simulator game</small></h3>
+                    <p class="lead"><small><strong>BUY SELL EARN </strong>market shares with <strong>VIRTUAL MONEY </strong>and have a <strong>FUN</strong>.</small><a class="btn-primary btn-sm" data-toggle="modal" data-target="#modelUsrname" style="float: right;"> Lest Play <span class="glyphicon glyphicon-triangle-right "></span></a></p>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="alert alert-success">
-                            <h4><span class="glyphicon glyphicon-user"></span><strong style="font-size: 90%">Multiplayer experience</strong> </h4>
-                            <p style="font-size: 15px;">
+                <div class="col-sm-4">
+                </div>
+            </div>
 
-                                <small>
-                                    You can challenge your friends to play virtual trader and compair your skills.<br />
-                                    Don't worry if you are alone, there are computer players
-
-                                </small>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="img-responsive" style="height: 340px;" width="500px;" src="~/Src/Images/511198842.jpg" />
+                </div>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
 
                             <div class="alert alert-success">
-                                <h4><span class="glyphicon glyphicon-usd"></span><strong>Trade without a risk</strong> </h4>
+                                <h4><span class="glyphicon glyphicon-usd"></span><strong style="font-size: 90%">Trade without any risk</strong> </h4>
                                 <p style="font-size: 15px;">
 
                                     <small>
                                         Start with $1000 LKR in virtual cash and put your trading skills to  earn maximum virtual creadits
                                         <br />
                                         <br />
-                                        <br />
+                                    </small>
+                                </p>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div>
+                                <div class="alert alert-success">
+                                    <h4><span class="glyphicon glyphicon-stats"></span><strong>Improve your skills</strong> </h4>
+                                    <p style="font-size: 15px;">
+
+                                        <small>
+                                            This is a good choice to get a stock trading experience before you are going to deal with a real stock market
+
+                                        </small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="alert alert-success">
+                                <h4><span class="glyphicon glyphicon-user"></span><strong style="font-size: 90%">Multiplayer experience</strong> </h4>
+                                <p style="font-size: 15px;">
+
+                                    <small>
+                                        You can challenge your friends to play virtual trader and compair your skills.<br />
+                                        Don't worry if you are alone, there are computer players
+
                                     </small>
                                 </p>
                             </div>
                         </div>
+                        <div class="col-sm-6">
+                            <div>
+
+                                <div class="alert alert-success">
+                                    <h4><span class="glyphicon glyphicon-usd"></span><strong>Trade without a risk</strong> </h4>
+                                    <p style="font-size: 15px;">
+
+                                        <small>
+                                            Start with $1000 LKR in virtual cash and put your trading skills to  earn maximum virtual creadits
+                                            <br />
+                                            <br />
+                                            <br />
+                                        </small>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+                @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+            </div>
+            @*<div class="row">
+                    <div class="col-md-4">
+                        <h2>Getting started</h2>
+                        <p>
+                            ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
+                            a broad range of clients, including browsers and mobile devices. ASP.NET Web API
+                            is an ideal platform for building RESTful applications on the .NET Framework.
+                        </p>
+                        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Get more libraries</h2>
+                        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+                        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Web Hosting</h2>
+                        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+                        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+                    </div>
+                </div>*@
         </div>
-        @*<div class="row">
-                <div class="col-md-4">
-                    <h2>Getting started</h2>
-                    <p>
-                        ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-                        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-                        is an ideal platform for building RESTful applications on the .NET Framework.
-                    </p>
-                    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+    </div>
+    <div class="modal fade" id="modelUsrname" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <form @*action="@Url.Action("GameBoard", "Game")" method="post"*@>
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Please enter a username    </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Username</label>
+                            <input type="text" class="form-control" name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp" placeholder="Type a username">
+                            @* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        @* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>*@
+                        <button id="btnOK" type="button" class="btn btn-primary">OK</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modelMsg" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>
+                        Waiting for 4 more users
+                    </h4>
                 </div>
-                <div class="col-md-4">
-                    <h2>Get more libraries</h2>
-                    <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-                    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
-                </div>
-                <div class="col-md-4">
-                    <h2>Web Hosting</h2>
-                    <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-                    <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
-                </div>
-            </div>*@
+            </div>
+        </div>
     </div>
 </div>
-<div class="modal fade" id="modelUsrname" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+<div class="jumbotron" id="graphs" style="display:none;">
+    <div class="row">
+        <div class="col-sm-9"></div>
+        <div class="col-sm-3">
+            <span style="float: right; background-color: #428bca;" class="badge badge-pill badge-success"><span class="glyphicon glyphicon-user"><label id="user"></label> </span></span>
+            <br />
+        </div>
+    </div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item active"><a data-toggle="tab" href="#tab1"><small>ICT sector</small> </a></li>
+        <li class="nav-item"><a data-toggle="tab" href="#tab2"><small>Food & breverages sector</small></a></li>
+        <li class="nav-item"><a data-toggle="tab" href="#tab3"><small>Shipping</small></a></li>
+        <li class="nav-item"><a data-toggle="tab" href="#tab4"><small>Aviation </small> </a></li>
+
+
+    </ul>
+
+    <div class="tab-content" style="background-color: #ffffff; border: 1px solid #ffffff;">
+        <div id="tab1" class="tab-pane fade in active">
+            <div class="chart" id="ICT"></div>
+
+        </div>
+        <div id="tab2" class="tab-pane fade" style="background-color: #ffffff; border: 1px solid #ffffff;">
+            <div class="container">
+                <div class="chart" id="FoodBeverages"></div>
+            </div>
+        </div>
+        <div id="tab3" class="tab-pane fade" style="background-color: #ffffff; border: 1px solid #ffffff;">
+            <div class="container">
+                <div class="chart" id="Shipping"></div>
+            </div>
+        </div>
+        <div id="tab4" class="tab-pane fade" style="background-color: #ffffff; border: 1px solid #ffffff;">
+            <div class="container">
+                <div class="chart" id="Aviation"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="jumbotron" id="portfolio">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-dark  table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Transaction</th>
+                            <th scope="col">Stock</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Total</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="history">
+                        
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="modal fade" id="modalBuy" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <form @*action="@Url.Action("GameBoard", "Game")" method="post"*@>
+            <form @*action="@Url.Action("GameBoard", "Game")"*@>
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLongTitle">Please enter a username    </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -124,43 +233,113 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input type="text" class="form-control" name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp" placeholder="Type a username">
+                        <label>Company</label>
+                        <select class="form-control">
+                            
+                            <option value="1">
+                                WSO2
+
+                            </option>
+                            <option value="2">
+                                Pearson
+                            </option>
+                            <option value="3">
+                                Vertusa
+                            </option>
+                        </select>
+                        <label>Share Price</label>
+                        <input type="text" value="200" class="form-control" name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp" disabled="disabled">
+                        <label>Units</label>
+                        <input type="number" value="0" placeholder="500 MAX" class="form-control" name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp">
                         @* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
                     </div>
                 </div>
                 <div class="modal-footer">
                     @* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>*@
-                    <button id="btnOK" type="button" class="btn btn-primary">OK</button>
+                    <button type="button" class="btn btn-primary">OK</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-<div class="modal fade" id="modelMsg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="modalSell" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <div class="modal-body">
-                <h4>
-                    Waiting for 4 more users
-                </h4>
-            </div>
+            <form action="@Url.Action("GameBoard", "Game")">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sell Shares</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Company</label>
+                        <select class="form-control">
+                            <option value="0">
+                                Please Select
+                            </option>
+                            <option value="1">
+                                WSO2
+                            </option>
+                            <option value="2">
+                                Pearson
+                            </option>
+                            <option value="3">
+                                Vertusa
+                            </option>
+                        </select>
+                        <label>Share Price</label>
+                        <input type="text" value="200" class="form-control" name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp" disabled="disabled">
+                        <label>Units</label>
+                        <input type="number" value="0" placeholder="500 MAX" class="form-control" name="txtUsrname" id="txtUsrname" aria-describedby="emailHelp">
+                        @* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    @* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>*@
+                    <button type="button" class="btn btn-primary">Sell</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+
 @section Scripts {
     @*@Scripts.Render("~/bundles/jquery")*@
+
+    <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script src="https://www.amcharts.com/lib/3/serial.js"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/none.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
     <script src="~/Scripts/socket.io.js"></script>
     <script type="text/javascript">
+
+        var marketData = [];
+        var charts = [];
+        const maxTurns = 10;
+        var turn = 1;
+        var currentPrices = [];
+        var clock = function () {
+            return turn;
+        }
+        var currentData = [];
+        function zoomChart() {
+            chart.zoomToIndexes(chart.dataProvider.length - 20, chart.dataProvider.length - 1);
+        }
         $(function () {
+            $("#portfolio").hide();
+            // $("#graphs").hide();
 
 
-            var player4
-            var socket = io('http://localhost:3000');
+            var socket = io('http://localhost:8081');
             $("#btnOK").click(function () {
                 var username = $("#txtUsrname").val();
+
+                $("#user").text(" "+$("#txtUsrname").val());
                 if (username == "") {
                     alert("Please enter a username!");
+                    
                     return;
                 }
 
@@ -174,16 +353,377 @@
             });
             socket.on('Connect', function (data) {
                 $("#PlayerID").val(data);
-               // alert(data);
+                // alert(data);
             });
             socket.on('JoinGame', function (data) {
-                $("#GameID").val(data);
-                $("#username").val($("#txtUsrname").val());
-                $("#GameDetails").submit();
 
-            });
+                $("#modelMsg").modal('hide');
+                marketData = data.gameData;
+                alert(marketData);
+                $("#GameID").val(data.gameID);
+                $("#username").val($("#txtUsrname").val());
+                $("#graphs").removeAttr("style");
+                $("#homeContent").hide();
+                $("#portfolio").show();
+               // $("#lblUserName").text($("#txtUsrname").val());
+                drawChart();
+                setTimeout(drawChart, 3000);
+
+            }
+            );
 
         });
+
+        var drawChart = function () {
+            for (var i = 0; i < marketData.length; i++) {
+                var chartdata = [];
+                var company1 = marketData[i].companies[0].companyName;
+                var values1 = marketData[i].companies[0].prices;
+                var company2 = marketData[i].companies[1].companyName;
+                var values2 = marketData[i].companies[1].prices;
+                var company3 = marketData[i].companies[2].companyName;
+                var values3 = marketData[i].companies[2].prices;
+                var obj = {
+                    "turn": clock()
+                };
+                Object.defineProperty(obj, company1, {
+                    value: values1[(clock() - 1)],
+                    writable: true,
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(obj, company2, {
+                    value: values2[(clock() - 1)],
+                    writable: true,
+                    enumerable: true,
+                    configurable: true
+                });
+                Object.defineProperty(obj, company3, {
+                    value: values3[(clock() - 1)],
+                    writable: true,
+                    enumerable: true,
+                    configurable: true
+                });
+
+                for (var x = 0; x < maxTurns; x++) {
+                    if (x + 1 == clock()) {
+                        chartdata.push(
+                            obj
+                        );
+                        currentData.push(obj);
+
+                    }
+                    else if (x + 1 < clock()) {
+                        var obj2 = {
+                            "turn": x + 1
+                        };
+                        Object.defineProperty(obj2, company1, {
+                            value: values1[x],
+                            writable: true,
+                            enumerable: true,
+                            configurable: true
+                        });
+                        Object.defineProperty(obj2, company2, {
+                            value: values2[x],
+                            writable: true,
+                            enumerable: true,
+                            configurable: true
+                        });
+                        Object.defineProperty(obj2, company3, {
+                            value: values3[x],
+                            writable: true,
+                            enumerable: true,
+                            configurable: true
+                        });
+                        chartdata.push(
+                            obj2
+                        );
+                    }
+                    else {
+                        var obj1 = { "turn": x + 1 }
+                        Object.defineProperty(obj1, company1, {
+                            value: null,
+                            writable: true,
+                            enumerable: true,
+                            configurable: true
+                        });
+                        Object.defineProperty(obj1, company2, {
+                            value: null,
+                            writable: true,
+                            enumerable: true,
+                            configurable: true
+                        });
+                        Object.defineProperty(obj1, company3, {
+                            value: null,
+                            writable: true,
+                            enumerable: true,
+                            configurable: true
+                        });
+                        chartdata.push(obj1);
+                    }
+                }
+
+                console.log(chartdata);
+
+                if (marketData[i].sectorName == "ICT") {
+                    charts.push(
+                        AmCharts.makeChart("ICT", {
+                            "type": "serial",
+                            "theme": "none",
+                            "legend": {
+                                "useGraphSettings": true
+                            },
+                            "dataProvider": chartdata,
+                            "synchronizeGrid": true,
+                            "valueAxes": [{
+                                "id": "v3",
+                                "axisColor": "#B0DE09",
+                                "axisThickness": 2,
+                                "gridAlpha": 0,
+                                "offset": 50,
+                                "axisAlpha": 1,
+                                "position": "left"
+                            }],
+                            "graphs": [{
+                                "valueAxis": "v3",
+                                "lineColor": "#FF6600",
+                                "bullet": "round",
+                                "bulletBorderThickness": 1,
+                                "hideBulletsCount": 30,
+                                "title": company1,
+                                "valueField": company1,
+                                "fillAlphas": 0
+                            }, {
+                                "valueAxis": "v3",
+                                "lineColor": "#FCD202",
+                                "bullet": "square",
+                                "bulletBorderThickness": 1,
+                                "hideBulletsCount": 30,
+                                "title": company2,
+                                "valueField": company2,
+                                "fillAlphas": 0
+                            }, {
+                                "valueAxis": "v3",
+                                "lineColor": "#B0DE09",
+                                "bullet": "triangleUp",
+                                "bulletBorderThickness": 1,
+                                "hideBulletsCount": 30,
+                                "title": company3,
+                                "valueField": company3,
+                                "fillAlphas": 0
+                            }],
+                            "chartScrollbar": {},
+                            "chartCursor": {
+                                "cursorPosition": "mouse"
+                            },
+                            "categoryField": "turn",
+                            "categoryAxis": {
+                                "parseDates": false,
+                                "axisColor": "#DADADA",
+                                "minorGridEnabled": true
+                            },
+                            "export": {
+                                "enabled": false,
+                                "position": "bottom-right"
+                            }
+                        }));
+                }
+
+
+                else if (marketData[i].sectorName == "Aviation") {
+                    AmCharts.makeChart("Aviation", {
+                        "type": "serial",
+                        "theme": "none",
+                        "legend": {
+                            "useGraphSettings": true
+                        },
+                        "dataProvider": chartdata,
+                        "synchronizeGrid": true,
+                        "valueAxes": [{
+                            "id": "v3",
+                            "axisColor": "#B0DE09",
+                            "axisThickness": 2,
+                            "gridAlpha": 0,
+                            "offset": 50,
+                            "axisAlpha": 1,
+                            "position": "left"
+                        }],
+                        "graphs": [{
+                            "valueAxis": "v3",
+                            "lineColor": "#FF6600",
+                            "bullet": "round",
+                            "bulletBorderThickness": 1,
+                            "hideBulletsCount": 30,
+                            "title": company1,
+                            "valueField": company1,
+                            "fillAlphas": 0
+                        }, {
+                            "valueAxis": "v3",
+                            "lineColor": "#FCD202",
+                            "bullet": "square",
+                            "bulletBorderThickness": 1,
+                            "hideBulletsCount": 30,
+                            "title": company2,
+                            "valueField": company2,
+                            "fillAlphas": 0
+                        }, {
+                            "valueAxis": "v3",
+                            "lineColor": "#B0DE09",
+                            "bullet": "triangleUp",
+                            "bulletBorderThickness": 1,
+                            "hideBulletsCount": 30,
+                            "title": company3,
+                            "valueField": company3,
+                            "fillAlphas": 0
+                        }],
+                        "chartScrollbar": {},
+                        "chartCursor": {
+                            "cursorPosition": "mouse"
+                        },
+                        "categoryField": "turn",
+                        "categoryAxis": {
+                            "parseDates": false,
+                            "axisColor": "#DADADA",
+                            "minorGridEnabled": true
+                        },
+                        "export": {
+                            "enabled": false,
+                            "position": "bottom-right"
+                        }
+                    });
+                }
+                else if (marketData[i].sectorName == "FoodBeverages") {
+                    AmCharts.makeChart("FoodBeverages", {
+                        "type": "serial",
+                        "theme": "none",
+                        "legend": {
+                            "useGraphSettings": true
+                        },
+                        "dataProvider": chartdata,
+                        "synchronizeGrid": true,
+                        "valueAxes": [{
+                            "id": "v3",
+                            "axisColor": "#B0DE09",
+                            "axisThickness": 2,
+                            "gridAlpha": 0,
+                            "offset": 50,
+                            "axisAlpha": 1,
+                            "position": "left"
+                        }],
+                        "graphs": [{
+                            "valueAxis": "v3",
+                            "lineColor": "#FF6600",
+                            "bullet": "round",
+                            "bulletBorderThickness": 1,
+                            "hideBulletsCount": 30,
+                            "title": company1,
+                            "valueField": company1,
+                            "fillAlphas": 0
+                        }, {
+                            "valueAxis": "v3",
+                            "lineColor": "#FCD202",
+                            "bullet": "square",
+                            "bulletBorderThickness": 1,
+                            "hideBulletsCount": 30,
+                            "title": company2,
+                            "valueField": company2,
+                            "fillAlphas": 0
+                        }, {
+                            "valueAxis": "v3",
+                            "lineColor": "#B0DE09",
+                            "bullet": "triangleUp",
+                            "bulletBorderThickness": 1,
+                            "hideBulletsCount": 30,
+                            "title": company3,
+                            "valueField": company3,
+                            "fillAlphas": 0
+                        }],
+                        "chartScrollbar": {},
+                        "chartCursor": {
+                            "cursorPosition": "mouse"
+                        },
+                        "categoryField": "turn",
+                        "categoryAxis": {
+                            "parseDates": false,
+                            "axisColor": "#DADADA",
+                            "minorGridEnabled": true
+                        },
+                        "export": {
+                            "enabled": false,
+                            "position": "bottom-right"
+                        }
+                    });
+                }
+                else if (marketData[i].sectorName == "Shipping") {
+                    AmCharts.makeChart("Shipping", {
+                        "type": "serial",
+                        "theme": "none",
+                        "legend": {
+                            "useGraphSettings": true
+                        },
+                        "dataProvider": chartdata,
+                        "synchronizeGrid": true,
+                        "valueAxes": [{
+                            "id": "v3",
+                            "axisColor": "#B0DE09",
+                            "axisThickness": 2,
+                            "gridAlpha": 0,
+                            "offset": 50,
+                            "axisAlpha": 1,
+                            "position": "left"
+                        }],
+                        "graphs": [{
+                            "valueAxis": "v3",
+                            "lineColor": "#FF6600",
+                            "bullet": "round",
+                            "bulletBorderThickness": 1,
+                            "hideBulletsCount": 30,
+                            "title": company1,
+                            "valueField": company1,
+                            "fillAlphas": 0
+                        }, {
+                            "valueAxis": "v3",
+                            "lineColor": "#FCD202",
+                            "bullet": "square",
+                            "bulletBorderThickness": 1,
+                            "hideBulletsCount": 30,
+                            "title": company2,
+                            "valueField": company2,
+                            "fillAlphas": 0
+                        }, {
+                            "valueAxis": "v3",
+                            "lineColor": "#B0DE09",
+                            "bullet": "triangleUp",
+                            "bulletBorderThickness": 1,
+                            "hideBulletsCount": 30,
+                            "title": company3,
+                            "valueField": company3,
+                            "fillAlphas": 0
+                        }],
+                        "chartScrollbar": {},
+                        "chartCursor": {
+                            "cursorPosition": "mouse"
+                        },
+                        "categoryField": "turn",
+                        "categoryAxis": {
+                            "parseDates": false,
+                            "axisColor": "#DADADA",
+                            "minorGridEnabled": true
+                        },
+                        "export": {
+                            "enabled": false,
+                            "position": "bottom-right"
+                        }
+                    });
+                }
+
+
+            }
+            turn++;
+            if (!(turn == maxTurns+1)) {
+                setTimeout(drawChart, 30000);
+            }
+        }
 
     </script>
 }

@@ -6,7 +6,7 @@ var xhr = new XMLHttpRequest();
 var querystring = require('querystring');
 var io = require('socket.io')(http);
 var uniqid = require('uniqid');
-var bankModule = require("./BankAccount.js");
+
 //io.set('origins', 'www.mydomain.com:80');
 io.on('connection', function (socket) {
     var players = jsonfile.readFileSync("./JSON/Players.json");
@@ -26,8 +26,10 @@ io.on('connection', function (socket) {
     io.to(player.PlayerID).emit("Connect", player.PlayerID)
 
     //console.log('A player connected ' + socket.handshake.address + " count " + playersCount);
-    socket.on("buyShares", function (data) {
-        var company = data.Company;
+    socket.on("buyShares", function(data) {
+        var stock = data.stock;
+        var qty = data.qty;
+        var price = data.price;
     });
     socket.on('registerPlayer', function (playerData) {
         var players = jsonfile.readFileSync("./JSON/Players.json");
@@ -129,10 +131,6 @@ function getRandomStockValues() {
     var FoodBeverages = { Nestle: 1, Pepsi: 2, Heinz: 3 };
     var Shipping = { Marsk: 1, OOCL: 2, EverGreen: 3 };
     var Aviation = { Emirates: 1, Quantas: 2, Ethihad: 3 };
-
-
-
-
 
 
     return marketData;
