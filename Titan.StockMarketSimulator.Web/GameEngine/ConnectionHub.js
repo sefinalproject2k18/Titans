@@ -26,8 +26,10 @@ io.on('connection', function (socket) {
     io.to(player.PlayerID).emit("Connect", player.PlayerID)
 
     //console.log('A player connected ' + socket.handshake.address + " count " + playersCount);
-    socket.on("buyShares", function (data) {
-        var company = data.Company;
+    socket.on("buyShares", function(data) {
+        var stock = data.stock;
+        var qty = data.qty;
+        var price = data.price;
     });
     socket.on('registerPlayer', function (playerData) {
         var players = jsonfile.readFileSync("./JSON/Players.json");

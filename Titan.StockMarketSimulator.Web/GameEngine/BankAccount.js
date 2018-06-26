@@ -21,7 +21,7 @@ function createAccount(GameID, PlayerID, Username) {
     });
 }
 
-function depositBankAccount(GameID, PlayerID, Amount, Username) {
+function depositBankAccount(GameID, PlayerID, Amount) {
     var bankAccounts = jsonfile.readFileSync("./JSON/BankAccount.json");
     var bal = 0;
     for (var i = 0; i < BankAccount.length; i++) {
@@ -50,7 +50,7 @@ function withdrawBankAccount(GameID, PlayerID, Amount) {
                 break;
             }
             else {
-                return "Error: Insufficient balance";
+                return "error";
             }
 
 
@@ -70,7 +70,7 @@ function getBalance(GameID, PlayerID) {
         if (bankAccounts[i].GameID == GameID && bankAccounts[i].PlayerID == PlayerID) {
             return bankAccounts[i].Balance;
         }
-        return "No account found";
+        return "error";
     }
 }
 
