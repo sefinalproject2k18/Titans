@@ -931,6 +931,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="GameEngine\JSON\PlayerCount.json" />
     <Content Include="GameEngine\JSON\Players.json" />
+    <Content Include="GameEngine\package-lock.json" />
+    <Content Include="GameEngine\JSON\TransactionLog.json" />
     <None Include="Properties\PublishProfiles\qas.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />

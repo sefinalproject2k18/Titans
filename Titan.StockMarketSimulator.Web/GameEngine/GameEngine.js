@@ -6,7 +6,7 @@ var xhr = new XMLHttpRequest();
 var querystring = require('querystring');
 var io = require('socket.io')(http);
 var uniqid = require('uniqid');
-var bankModule = require("./BankAccount.js");
+
 //io.set('origins', 'www.mydomain.com:80');
 io.on('connection', function (socket) {
     var players = jsonfile.readFileSync("./JSON/Players.json");
