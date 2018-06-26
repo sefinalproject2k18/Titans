@@ -11,10 +11,11 @@ namespace Titan.StockMarketSimulator.Web.Controllers
         //
         // GET: /Game/
 
-        public ActionResult GameBoard(string txtUsrname)
+            [HttpPost]
+        public ActionResult GameBoard()
         {
             //txtUsrname
-            ViewBag.Usrname = txtUsrname;
+            ViewBag.Usrname = Request.Form["username"];
             return View();
         }
 

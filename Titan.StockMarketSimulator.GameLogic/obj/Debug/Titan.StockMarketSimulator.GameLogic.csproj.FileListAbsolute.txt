@@ -1,0 +1,6 @@
+C:\Users\ekana\Source\Repos\Titans\Titan.StockMarketSimulator.GameLogic\bin\Debug\Titan.StockMarketSimulator.GameLogic.dll
+C:\Users\ekana\Source\Repos\Titans\Titan.StockMarketSimulator.GameLogic\bin\Debug\Titan.StockMarketSimulator.GameLogic.pdb
+C:\Users\ekana\Source\Repos\Titans\Titan.StockMarketSimulator.GameLogic\obj\Debug\Titan.StockMarketSimulator.GameLogic.csprojAssemblyReference.cache
+C:\Users\ekana\Source\Repos\Titans\Titan.StockMarketSimulator.GameLogic\obj\Debug\Titan.StockMarketSimulator.GameLogic.csproj.CoreCompileInputs.cache
+C:\Users\ekana\Source\Repos\Titans\Titan.StockMarketSimulator.GameLogic\obj\Debug\Titan.StockMarketSimulator.GameLogic.dll
+C:\Users\ekana\Source\Repos\Titans\Titan.StockMarketSimulator.GameLogic\obj\Debug\Titan.StockMarketSimulator.GameLogic.pdb
