@@ -20,4 +20,4 @@ www.freevirtualtrader.com
 
 
 # How To Install The Game
-
+https://github.com/sefinalproject2k18/Titans/wiki/How-to-Install
