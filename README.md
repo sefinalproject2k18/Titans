@@ -13,11 +13,15 @@ Software Engineering Final Project 2
 
 # About
 
+VIRTUAL TRADER is a variation of stock market trading game.This game is a multiplayer game which you can play online also this
+game give a real world experince & guide for who Willing to join to the stock market world as a new comer.
 
 
 # Play It Now Online
+
 www.freevirtualtrader.com
 
 
-# How To Install The Game
+# How To Install 
+
 https://github.com/sefinalproject2k18/Titans/wiki/How-to-Install
